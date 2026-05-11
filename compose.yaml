@@ -7,6 +7,8 @@ services:
       MARIADB_DATABASE: db
       MARIADB_USER: db
       MARIADB_PASSWORD: db
+    ports:
+      - 3306:3306
     volumes:
       - ./mariadb:/docker-entrypoint-initdb.d
   phpmyadmin:
