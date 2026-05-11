@@ -37,6 +37,13 @@ header > img{
 #container > *{
     flex-grow: 1;
 }
+
+@media (max-width:800px) {
+    #container{
+        display: block;
+    }
+}
+
 main{
     padding: 20px;
 }

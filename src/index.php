@@ -21,33 +21,21 @@ $conn = mysqli_connect("127.0.0.1", "root", 'db', "filmy");
             <?php
             include "film.php";
             ?>
-            <h2>Tytul i rok</h2>
-            <i>Rummunski</i>
-            <b>Gotunki</b>
-            <b>Srednia lub brak</b>
-            <h3>Galeria</h3>
 
-            <div>
-                <img src="camera.png" alt="Asd" class="mini">
-            </div>
-            <hr>
             <div class="big-parent">
-                <img src="camera.png" class="big">
+                <img src="camera.png" class="big" id="big">
             </div>
         </main>
         <aside>
-            
-            <h3>Najnowsze filmy rumunskie</h3>
-            <p>asdasd &gt;</p>
-            <h3>TOP 5 kategorii</h3>
-            <ul>
-                <li>asd srednia ocena</li>
-            </ul>
+            <?php
+            include "filmyKategorie.php";
+            ?>
         </aside>
     </div>
     <footer>
-        &copy;
+        &copy;2026 Ivan Skrynnik
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
 <?php
