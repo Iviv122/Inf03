@@ -1,0 +1,11 @@
+SELECT filmy.id,filmy.rok,filmy.nazwa_pl,filmy.nazwa_rum, AVG(ocena.rate) FROM `filmy` LEFT JOIN ocena ON filmy.id = ocena.film_id WHERE filmy.id = 3;
+ALBO 
+SELECT filmy.suma/filmy.count AS `srednia` FROM `filmy` WHERE filmy.id = 3 
+
+SELECT kategorie.nazwa FROM kategorie LEFT JOIN filmy ON kategorie.id = filmy.kategoria_id WHERE filmy.id = 3;
+SELECT zdjecza.name FROM filmy LEFT JOIN zdjecza ON zdjecza.film_id = filmy.id WHERE filmy.id = 3;
+SELECT filmy.id,filmy.nazwa_pl,filmy.rok FROM filmy ORDER BY filmy.rok DESC;
+
+INSERT INTO `ocena`(`id`, `film_id`, `rate`, `description`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]');
+ALBO
+UPDATE `filmy` SET `suma` = `suma` + 1, `count` = `count` + 1 WHERE `id` = 3;
